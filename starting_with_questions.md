@@ -70,6 +70,38 @@ Answer:
 
 
 SQL Queries:
+WITH top_orders AS (
+SELECT country, name, SUM(CAST (ordered_quantity AS integer))AS total_ordered
+FROM products
+INNER JOIN allsessions ON products.productsku = allsessions.productsku
+GROUP BY country, name
+ORDER BY country, SUM(CAST (ordered_quantity AS integer)) DESC)
+
+,
+ranked_top_orders AS (
+SELECT country, name, total_ordered, RANK() OVER (PARTITION BY country ORDER BY total_ordered DESC) AS top_sellers
+FROM top_orders) 
+
+SELECT * 
+FROM ranked_top_orders 
+WHERE top_sellers = 1
+
+
+WITH top_orders AS (
+SELECT city, name, SUM(CAST (ordered_quantity AS integer))AS total_ordered
+FROM products
+INNER JOIN allsessions ON products.productsku = allsessions.productsku
+GROUP BY city, name
+ORDER BY city, SUM(CAST (ordered_quantity AS integer)) DESC)
+
+,
+ranked_top_orders AS (
+SELECT city, name, total_ordered, RANK() OVER (PARTITION BY city ORDER BY total_ordered DESC) AS top_sellers
+FROM top_orders) 
+
+SELECT * 
+FROM ranked_top_orders 
+WHERE top_sellers = 1
 
 
 
