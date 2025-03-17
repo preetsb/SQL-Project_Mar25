@@ -43,7 +43,7 @@ WHERE units_sold IS NOT NULL
 GROUP BY city;
 
 
-Answer:
+Answer: The majorty of orders are from Czzechia and the United States, 
 
 
 
@@ -70,6 +70,7 @@ Answer:
 
 
 SQL Queries:
+
 WITH top_orders AS (
 SELECT country, name, SUM(CAST (ordered_quantity AS integer))AS total_ordered
 FROM products
@@ -85,7 +86,6 @@ FROM top_orders)
 SELECT * 
 FROM ranked_top_orders 
 WHERE top_sellers = 1
-
 
 WITH top_orders AS (
 SELECT city, name, SUM(CAST (ordered_quantity AS integer))AS total_ordered
@@ -105,7 +105,7 @@ WHERE top_sellers = 1
 
 
 
-Answer:
+Answer: I cannot see an obvious pattern but it's clear the majority of the revenue comes from custom decals and it's interesting that the USA's number one product is 'kick balls' and they also bring in the most revenue. Makes me wonder what is so special about these kick balls. 
 
 
 
@@ -114,10 +114,25 @@ Answer:
 **Question 5: Can we summarize the impact of revenue generated from each city/country?**
 
 SQL Queries:
+Same queries as first question 
+
+SELECT country, SUM(CAST (unit_price AS integer)/1000000 * CAST (units_sold AS integer)) AS revenue2
+FROM analytics
+INNER JOIN allsessions ON analytics.fullvisit_id = allsessions.fullvisitorid 
+WHERE units_sold IS NOT NULL 
+GROUP BY country 
+ORDER BY revenue2 DESC
+
+SELECT city, SUM(CAST (unit_price AS integer)/1000000 * CAST (units_sold AS integer)) AS revenue2
+FROM analytics
+INNER JOIN allsessions ON analytics.fullvisit_id = allsessions.fullvisitorid 
+WHERE units_sold IS NOT NULL 
+GROUP BY city 
+ORDER BY revenue2 DESC
 
 
 
-Answer:
+Answer: While it's easy to see who the top countries and cities are (with the USA far ahead), assessing the impact on revenue is difficult without some historical information. 
 
 
 
