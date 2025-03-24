@@ -45,6 +45,11 @@ Changed date column to standard format
 ```
 SELECT CAST(date AS DATE) FROM allsessions
 ```
+Then filtered for the relevant data 
+```
+SELECT (CAST(date AS DATE)), fullvisitorid, time, country, city, totaltransactionrevenue, transactions, timeonsite, pageviews, productquantity, productrevenue, productprice, productsku, v2productname 
+FROM allsessions;
+```
 
 ### analytics  
 Changed unit_price to integer, performed calculation to make it make more sense. 
