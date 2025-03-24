@@ -26,7 +26,7 @@ The top countries are USA, India, UK, Canada, and Germany.
 
 
 
-Question 3: 
+Question 3: What percentage of visitors did not buy anything? How long were the on the site? 
 
 SQL Queries:
 
@@ -34,7 +34,7 @@ Answer:
 
 
 
-Question 4: 
+Question 4: What percentage of vistors bought something? How long were they on the site? 
 
 SQL Queries:
 
