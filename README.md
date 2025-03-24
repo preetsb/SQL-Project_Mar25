@@ -22,4 +22,4 @@ It would have been useful to know what the values in columns like 'sentiment sco
 
 
 ## Future Goals
-Learning more advanced SQL queries so I could gain more insight on the company's sales and customer behaviour. Particularly so I can see if the NULL values can be populated (or at least some of them) 
+Learning more advanced SQL queries so I could gain more insight on the company's sales and customer behaviour. Particularly so I can see if the NULL values can be populated (or at least some of them). And I would create some new tables, probably 
