@@ -23,7 +23,6 @@ ORDER BY unique_visitors DESC;
 
 Answer: 
 The top countries are USA, India, UK, Canada, and Germany.   
-Interesting that the unique visitors and top revenue do not match (but I also realize how much data is missing).  
 
 
 
