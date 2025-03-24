@@ -19,7 +19,7 @@ WHERE units_sold IS NOT NULL
 GROUP BY city   
 ORDER BY revenue2 DESC
 ```
-
+TABLE WITH TOP 10 LIMIT 10 
 Answer:   
 Countries: United States, Czechia, Canada   
 Cities: Mountain View, San Bruno, New York  
@@ -42,7 +42,7 @@ INNER JOIN allsessions al ON a.fullvisit_id = al.fullvisitorid
 WHERE units_sold IS NOT NULL  
 GROUP BY city;
 ``` 
-
+TABLE WITH TOP 10 
 Answer: The majorty of orders are from Czechia and the United States,   
 
 
