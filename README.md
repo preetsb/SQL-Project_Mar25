@@ -1,21 +1,26 @@
 # Final-Project-Transforming-and-Analyzing-Data-with-SQL
 
 ## Project/Goals
-Whole lot of messy data about products, and transactions, and revenue but it is all meaningless with a lot missing. 
-Trying to make sense of it all, to understand where customers are coming from and their behaviours in order to focus marketing efforts to maximize revenue. 
+The ecommerce table is confusing but it's possible to see the valuable information in it and the reasons for the data collection. The goal is to clean up the table (as much as possible) and then try to find patterns and information that might help the business focus their marketing efforts. Just from first glance I could see that there was a lot of useful information about how the customers interacting with the website.  
 
 
 ## Process
-### Imported all the data into SQL from a .csv file. Explored the data, tried to get some sort of general sense of what is being conveyed and if there is a story happening. 
-### Instead of cleaning up the data from the first step, I jumped right into the queries and just counted distinct values and eliminated the NULL values with the idea that it would still provide a (somewhat) accurate sense of how revenue was being earned. 
+Imported all the data into SQL from a .csv file. Before cleaning up, I examined the data with some preliminary queries (for example, checking to see if all values in a column were null or not). Tried to get a general sense of what is happening with the purchases and customer behaviour. 
+
 
 ## Results
-It looks like a general ecommerce store that sells a wide variety of good. It was not easy to ascertain some information with the incomplete data (and my elementary SQL skills) but I did notice that the top unique visitors by country did not match the top revenue earners which was intriguing and something I would explore more. The vast majority of the revenue is from the USA and they really like their custom decals.  
+Looks to be some sort of Amazon-type store that sells a lot of things, or maybe it's just Canadian Tire. 
+
+CUSTOMER BEHAVIOUR? 
+ 
+ I did notice that the top unique visitors by country did not match the top revenue earners which was intriguing and something I would explore more. The vast majority of the revenue is from the USA and they really like their custom decals.  
 
 
 ## Challenges 
-The quality of the data (missing values, duplicates, confusing product names). I did what I could to clean it up but it was a challenge and I needed really complicated functions to find out some information. The primary challenge was that it was just so much data it was borderline incoherent and that's what made it frustrating but it's probably also similar to many real-life situations. 
+The quality of the data (missing values, duplicates, confusing product names) was the primary challenge but worked with it as best as possible trying to find the story or at least patterns. Had to make a few assumptions about what some values meant, like that the 'google' and 'youtube' in product names are how they reached the site and it should be a seperate column and that some NULL values simply meant they didn't buy anything (I used that assumption with 'not available in data demoset' as well). 
+
+It would have been useful to know what the values in columns like 'sentiment score' and 'ecommerce action type' mean as they could have provided some more insight but as it is, I just chose to eliminate them entirely since they were effectively meaningless. 
 
 
 ## Future Goals
-I would have dug deeper to find out how people are accessing the site and finding the product by connecting the search keyword and their ultimate purcahse. I probably gone even further and analyzed the *sentiment score* or tried to find out what *eccommerce action type* and *eccomerce action step* means, to map out the marketing funnel for the site. 
+
