@@ -15,24 +15,6 @@ Queries:
 Below, provide the SQL queries you used to clean your data.
 
 ### allsessions   
-Filtered the table for distinct fullvisitorid and kept the relevant columns 
-```
-SELECT DISTINCT fullvisitorid,
-		time, 
-		country,
- 		city,
-		totaltransactionrevenue,
-		transactions,
-		timeonsite,
-		pageviews,
-		date,
-		productquantity,
-		productrevenue,
-		 productprice,
-		productsku, 
-		v2productname 
-FROM allsessions;
-```
 
 Changed ‘not available in demo dataset’ to NULL 
 ```
@@ -45,10 +27,25 @@ Changed date column to standard format
 ```
 SELECT CAST(date AS DATE) FROM allsessions
 ```
-Then filtered for the relevant data 
+Filtered the table for distinct fullvisitorid and using the relevant columns 
 ```
-SELECT (CAST(date AS DATE)), fullvisitorid, time, country, city, totaltransactionrevenue, transactions, timeonsite, pageviews, productquantity, productrevenue, productprice, productsku, v2productname 
-FROM allsessions;
+SELECT DISTINCT ON (fullvisitorid) 
+    fullvisitorid, 
+    CAST(date AS DATE) AS formatted_date, 
+    time, 
+    country, 
+    city, 
+    totaltransactionrevenue, 
+    transactions, 
+    timeonsite, 
+    pageviews, 
+    productquantity, 
+    productrevenue, 
+    productprice, 
+    productsku, 
+    v2productname 
+FROM allsessions
+ORDER BY fullvisitorid, formatted_date ASC;
 ```
 
 ### analytics  
