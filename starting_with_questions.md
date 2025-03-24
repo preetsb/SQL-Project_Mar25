@@ -5,16 +5,16 @@ Answer the following questions and provide the SQL queries used to find the answ
 
 ``` 
 SELECT country, SUM(CAST (unit_price AS integer)/1000000 * CAST (units_sold AS integer)) AS revenue2  
-FROM analytics  
-INNER JOIN allsessions ON analytics.fullvisit_id = allsessions.fullvisitorid   
+FROM analytics a
+INNER JOIN allsessions as ON a.fullvisit_id = as.fullvisitorid   
 WHERE units_sold IS NOT NULL   
 GROUP BY country   
 ORDER BY revenue2 DESC
 ```
 ```
 SELECT city, SUM(CAST (unit_price AS integer)/1000000 * CAST (units_sold AS integer)) AS revenue2  
-FROM analytics  
-INNER JOIN allsessions ON analytics.fullvisit_id = allsessions.fullvisitorid   
+FROM analytics a
+INNER JOIN allsessions as ON a.fullvisit_id = as.fullvisitorid   
 WHERE units_sold IS NOT NULL   
 GROUP BY city   
 ORDER BY revenue2 DESC
@@ -30,15 +30,15 @@ Cities: Mountain View, San Bruno, New York
 
 ``` 
 SELECT country, AVG(CAST(units_sold AS INTEGER)) AS avg_units_sold  
-FROM analytics  
-INNER JOIN allsessions ON analytics.fullvisit_id = allsessions.fullvisitorid  
+FROM analytics a
+INNER JOIN allsessions as ON a.fullvisit_id = as.fullvisitorid  
 WHERE units_sold IS NOT NULL  
 GROUP BY country;
 ```
 ```
 SELECT city, AVG(CAST(units_sold AS INTEGER)) AS avg_units_sold  
-FROM analytics  
-INNER JOIN allsessions ON analytics.fullvisit_id = allsessions.fullvisitorid  
+FROM analytics a
+INNER JOIN allsessions as ON a.fullvisit_id = as.fullvisitorid  
 WHERE units_sold IS NOT NULL  
 GROUP BY city;
 ``` 
@@ -52,8 +52,8 @@ Answer: The majorty of orders are from Czechia and the United States,
 
 ```
 SELECT country, ordered_quantity, v2productcategory  
-FROM products   
-INNER JOIN allsessions ON allsessions.productsku = products.productsku   
+FROM products p   
+INNER JOIN allsessions as ON as.productsku = p.productsku   
 WHERE ordered_quantity IS NOT NULL   
 ORDER BY country, v2productcategory  
 ```
