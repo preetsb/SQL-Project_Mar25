@@ -173,7 +173,7 @@ WHERE top_sellers = 1
 | Appleton  | Aluminum Handy Emergency Flashlight          | 66            |   |
 
 
-The only thing that seems to be important is that the two biggest sellers are Kick Ball and Custom Decals, and this is true for a lot of countries. The same applies to the cities except for Palo Alto and Sunnyvale which have a strong demand for outdoor security cameras - which is interesting and I wonder why. 
+Thare just the first ten countries when put in alphabetical order. The only thing that seems to be important is that the two biggest sellers are Kick Ball and Custom Decals (when total ordered is sorted from highest to lowest), and this is true for a lot of countries. The same applies to the cities except for Palo Alto and Sunnyvale which have a strong demand for outdoor security cameras - which is interesting and I wonder why. 
 
 **Question 5: Can we summarize the impact of revenue generated from each city/country?**
 
