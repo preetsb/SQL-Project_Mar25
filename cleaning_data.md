@@ -15,16 +15,26 @@ Queries:
 Below, provide the SQL queries you used to clean your data.
 
 ### allsessions   
-
 Filtered the table for distinct fullvisitorid and kept the relevant columns 
-
 ```
-SELECT DISTINCT fullvisitorid, time, country, city, totaltransactionrevenue, transactions, timeonsite, pageviews, date, productquantity, productrevenue, productprice, productsku, v2productname 
+SELECT DISTINCT fullvisitorid,
+		time, 
+		country,
+ 		city,
+		totaltransactionrevenue,
+		transactions,
+		timeonsite,
+		pageviews,
+		date,
+		productquantity,
+		productrevenue,
+		 productprice,
+		productsku, v
+		2productname 
 FROM allsessions;
 ```
 
 Changed ‘not available in demo dataset’ to NULL 
-
 ```
 UPDATE allsessions 
 	SET city = NULL 
@@ -32,13 +42,12 @@ WHERE city = 'not available in demo dataset'
 ```
 
 Changed date column to standard format 
-
 ```
 SELECT CAST(date AS DATE) FROM allsessions
 ```
 
 ### analytics  
-
+Changed unit_price to integer, performed calculation to make it a standard price format in numbers and decimals. 
 ```
 SELECT(CAST (unit_price AS integer)/1000000) AS unit_price
 FROM analytics
@@ -46,7 +55,6 @@ FROM analytics
 
 ### products
 Dropped sentimentscore and sentimentmagnitude from Products table because I have no information what they indicate
-
 ```
 ALTER TABLE products 
 DROP COLUMN sentimentscore; 
@@ -58,7 +66,6 @@ DROP COLUMN sentimentmagnitude;
 
 ### sales_report
 Dropped sentiment_score and sentimentmagnitude from sales_report table for same reason as products table (and sentiment_score column is titled different from products table) 
-
 ```
 ALTER TABLE sales_report 
 DROP COLUMN sentiment_score; 
