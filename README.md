@@ -7,7 +7,7 @@ The ecommerce table is confusing but it's possible to see the valuable informati
 ## Process
 Imported all the data into SQL from a .csv file. Before cleaning up, I examined the data with some preliminary queries (for example, checking to see if all values in a column were null or not). Tried to get a general sense of what is happening with the purchases and customer behaviour. 
 
-Had to make soe huge assumptions and just assumed NULL meant zero in almost all cases. 
+Had to make some huge assumptions and just assumed NULL meant zero in almost all cases. 
 
 
 ## Results
@@ -22,4 +22,4 @@ It would have been useful to know what the values in columns like 'sentiment sco
 
 
 ## Future Goals
-Learning more advanced SQL queries so I could gain more insight on the company's sales and customer behaviour. Particularly so I can see if the NULL values can be populated (or at least some of them). And I would create some new tables, probably 
+Learning more advanced SQL queries so I could gain more insight on the company's sales and customer behaviour. Particularly so I can see if the NULL values can be populated (or at least some of them). And I would create some new tables. 
