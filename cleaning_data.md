@@ -29,8 +29,8 @@ SELECT DISTINCT fullvisitorid,
 		productquantity,
 		productrevenue,
 		 productprice,
-		productsku, v
-		2productname 
+		productsku, 
+		v2productname 
 FROM allsessions;
 ```
 
