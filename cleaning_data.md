@@ -47,7 +47,7 @@ SELECT CAST(date AS DATE) FROM allsessions
 ```
 
 ### analytics  
-Changed unit_price to integer, performed calculation to make it a standard price format in numbers and decimals. 
+Changed unit_price to integer, performed calculation to make it make more sense. 
 ```
 SELECT(CAST (unit_price AS integer)/1000000) AS unit_price
 FROM analytics
