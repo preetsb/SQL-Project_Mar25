@@ -9,11 +9,8 @@ Imported all the data into SQL from a .csv file. Before cleaning up, I examined 
 
 
 ## Results
-Looks to be some sort of Amazon-type store that sells a lot of things, or maybe it's just Canadian Tire. 
-
-CUSTOMER BEHAVIOUR? 
- 
- I did notice that the top unique visitors by country did not match the top revenue earners which was intriguing and something I would explore more. The vast majority of the revenue is from the USA and they really like their custom decals.  
+Looks to be some sort of Amazon-type store that sells a lot of things online. 
+I did notice that the top unique visitors by country did not match the top revenue earners which was intriguing and something I would explore more. The vast majority of the revenue is from the USA and they really like their custom decals.  
 
 
 ## Challenges 
