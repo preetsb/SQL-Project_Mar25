@@ -1,32 +1,39 @@
-Question 1: How many unique visitors are there on the site? 
+###Question 1: How many unique visitors are there on the site? 
 
 ```
-SELECT COUNT (fullvisitorid) AS unique_visitors   
-FROM allsessions  
-```
+SELECT COUNT (fullvisitorid) AS visitors   
+FROM allsessions
+``` 
+15134 total visitors 
 
-Answer: 
-15134 total visitors   
+```
+SELECT COUNT (DISTINCT fullvisitorid) AS unique_visitors   
+FROM allsessions
+```
 14223 UNIQUE visitors   
-Interesting to see there are a lot of unique visitors as opposed to repeat customers - real growth opportunity.   
 
 
-
-Question 2: How many unique visitors from each country? 
-
+###Question 2: How many unique visitors from each country? 
 ```   
 SELECT country, COUNT(DISTINCT fullvisitorid) AS unique_visitors    
 FROM allsessions 
 GROUP BY country  
 ORDER BY unique_visitors DESC;
 ```
+| COUNTRY        | UNIQUE_VISITORS |
+|----------------|-----------------|
+| United States  | 8118            |
+| India          | 693             |
+| United Kingdom | 641             |
+| Canada         | 607             |
+| Germany        | 321             |
+| Japan          | 233             |
+| Australia      | 219             |
+| France         | 205             |
+| Taiwan         | 160             |
 
-Answer: 
-The top countries are USA, India, UK, Canada, and Germany.   
-
-
-
-Question 3: What percentage of visitors did not buy anything? How long were the on the site? 
+  
+###Question 3: What percentage of visitors did not buy anything? 
 
 SQL Queries:
 
@@ -34,7 +41,7 @@ Answer:
 
 
 
-Question 4: What percentage of vistors bought something? How long were they on the site? 
+Question 4: What percentage of vistors bought something? 
 
 SQL Queries:
 
