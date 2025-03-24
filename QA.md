@@ -19,8 +19,3 @@ SELECT COUNT(fullvisitorid) FROM allsessions
 SELECT COUNT(DISTINCT fullvisitorid) FROM allsessions
 ```
 
-```
-SELECT (CAST(date AS DATE)), fullvisitorid, time, country, city, totaltransactionrevenue, transactions, timeonsite, pageviews, productquantity, productrevenue, productprice, productsku, v2productname 
-FROM allsessions;
-```
-
