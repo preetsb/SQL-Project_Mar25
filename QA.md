@@ -1,6 +1,8 @@
 ### What are your risk areas? Identify and describe them.
 
-The raw data in the ecommerce database is messy. 
+The raw data in the ecommerce database is messy and was difficult to work with. There were columns that were meaningless without more information and the number of assumptions I had to make was in itself a risk! 
+
+There are duplicate data but it makes sense since someone will visit the website more than once (so probably requires a merge of some sort) to get hte accurate data. Since I was unable to do this I simply chose to use distinct values and work with those - even though I sense it did not provide completely accurate information but it at least gave a sense of what customers were buying and where they are located. 
 
 
 
