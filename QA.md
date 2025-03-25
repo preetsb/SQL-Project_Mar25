@@ -14,6 +14,7 @@ There are 15134 rows in the table using the fullvisitorid column.
 ```
 SELECT COUNT(fullvisitorid) FROM allsessions
 ```
+
 14223 when duplicates were eliminated 
 ```
 SELECT COUNT(DISTINCT fullvisitorid) FROM allsessions
