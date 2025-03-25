@@ -16,7 +16,7 @@ I did notice that the top unique visitors by country did not match the top reven
 
 
 ## Challenges 
-The quality of the data (missing values, duplicates, confusing product names) was the primary challenge but worked with it as best as possible trying to find the story or at least patterns. Had to make a few assumptions about what some values meant, like that the 'google' and 'youtube' in product names are how they reached the site and it should be a seperate column and that some NULL values simply meant they didn't buy anything (I used that assumption with 'not available in data demoset' as well). 
+The quality of the data (missing values, duplicates, confusing product names) was the primary challenge but worked with it as best as possible trying to find the story or at least patterns. Had to make a few assumptions about what some values meant, like that the 'google' and 'youtube' in product names are how they reached the site and it should be a separate column and that some NULL values simply meant they didn't buy anything (I used that assumption with 'not available in data demoset' as well). 
 
 It would have been useful to know what the values in columns like 'sentiment score' and 'ecommerce action type' mean as they could have provided some more insight but as it is, I just chose to eliminate them entirely since they were effectively meaningless. 
 
